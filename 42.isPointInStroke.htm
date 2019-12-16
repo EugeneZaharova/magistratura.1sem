@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>isPointInStroke</b></legend>
+
+<p><p>ѕровер€ет, находитс€ ли указанна€ точка внутри области пути.</p>
+<h4>—интаксис</h4>
+<p>ctx.isPointInStroke(x, y)<br>
+ctx.isPointInStroke(path, x, y)</p>
+
+<h4>ѕараметры</h4>
+<ul>
+<li>x - координата х провер€емой точки;</li>
+<li>y - координата y провер€емой точки;</li>
+<li>path - провер€емый путь.</li>
+</ul>
+
+<h4>ѕример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const result = document.getElementById('result');
+
+ctx.rect(10, 10, 100, 100);
+ctx.stroke();
+result.innerText = ctx.isPointInStroke(50, 10);
+</pre>
+</div>
+
+</body>
+</html>

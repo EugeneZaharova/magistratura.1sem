@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>lineCap</b></legend>
+
+<p><p>ќпредел€ет оформление концов линий.</p>
+<h4>—интаксис</h4>
+<p>lineCap[=value]</p>
+<p> ƒоступны три значени€: butt (используетс€ по умолчанию), round, square. ≈сли не задавать значение, тогда будет происходить чтение свойства.</p>
+<div class="contentImg"><img src="linecap.png" alt="lineCap" width="380" height="154" /></div>
+<p>ѕри использовании значений round или squre, фактическа€ длина линии увеличиваетс€ на значение lineWidth (с двух сторон лини добавл€ютс€ отрезки длинной lineWidth/2).</p>
+
+<h4>ѕример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;myCanvas&quot;);
+var context = canvas.getContext(&quot;2d&quot;);
+	
+    // butt line cap (верхн€€ лини€)
+    context.beginPath();
+    context.moveTo(200, canvas.height / 2 - 50);
+    context.lineTo(canvas.width - 200, canvas.height / 2 - 50);
+    context.lineWidth = 20;
+    context.strokeStyle = &quot;#0000ff&quot;;
+    context.lineCap = &quot;butt&quot;
+    context.stroke();
+ 
+    // round line cap (средн€€ лини€)
+    context.beginPath();
+    context.moveTo(200, canvas.height / 2);
+    context.lineTo(canvas.width - 200, canvas.height / 2);
+    context.lineWidth = 20;
+    context.strokeStyle = &quot;#0000ff&quot;;
+    context.lineCap = &quot;round&quot;;
+    context.stroke();
+ 
+    // square line cap (нижн€€ лини€)
+    context.beginPath();
+    context.moveTo(200, canvas.height / 2 + 50);
+    context.lineTo(canvas.width - 200, canvas.height / 2 + 50);
+    context.lineWidth = 20;
+    context.strokeStyle = &quot;#0000ff&quot;;
+    context.lineCap = &quot;square&quot;;
+    context.stroke();
+</pre>
+</div>
+<p><a href="8.lineCap.exam.htm">ѕосмотреть пример</a>.</p>
+
+</body>
+</html>

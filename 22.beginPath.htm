@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>beginPath</b></legend>
+
+<p><p>Объявляем, что начинаем новый контур. Необходим когда хотим задать разные стили объектам на холсте.</p>
+
+<h4>Синтаксис</h4>
+<p>beginPath()</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+/* черная линия */
+ctx.beginPath();
+ctx.moveTo(50,50);
+ctx.lineTo(50,100);
+ctx.lineTo(100,100);
+ctx.lineWidth = 1;
+ctx.strokeStyle = &quot;black&quot;;
+ctx.stroke();
+
+/* красный треугольник */
+ctx.beginPath();
+ctx.moveTo(100,100);
+ctx.lineTo(100,200);
+ctx.lineTo(200,200);
+ctx.closePath();
+ctx.lineWidth = 5;
+ctx.strokeStyle = &quot;red&quot;;
+ctx.stroke();
+</pre>
+</div>
+<p><a href="22.beginPath.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

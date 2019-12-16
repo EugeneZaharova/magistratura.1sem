@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>lineTo</b></legend>
+
+<p><p>Рисует линию от текущего положения на холсте до точки (x, y). По этим координатам так же будет новое текущее положение на холсте.</p>
+
+<h4>Синтаксис</h4>
+<p>lineTo(x,y)</p>
+<p>Параметры обязательны.</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+ctx.moveTo(50,50);
+ctx.lineTo(50,100);
+ctx.lineTo(100,100);
+ctx.stroke();
+</pre>
+</div>
+<p><a href="43.lineTo.exam.htm">Посмотреть пример</a>.</p>
+<p>Цвет линии определятся свойством strokeStyle, толщина &mdash; lineWidth.</p>
+<p>На холсте линия отобразится после вызова метода stroke().</p></p>
+
+</body>
+</html>

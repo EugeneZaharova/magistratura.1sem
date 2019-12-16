@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>globalAlpha</b></legend>
+
+<p><p>Устанавливает/возвращает текущее значение прозрачности или альфа-канала графического объекта.</p>
+<h4>Синтаксис</h4>
+<p>context.globalAlpha=value</p>
+<p>value - значение прозрачности. Должно быть число между 0.0 (полная прозрачность) и 1.0 (нет прозрачности).</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext('2d');
+ctx.fillStyle = 'red';
+ctx.fillRect(20, 20, 75, 50);
+
+// Включим прозрачность
+ctx.globalAlpha = 0.2;
+ctx.fillStyle = 'blue';
+ctx.fillRect(50, 50, 75, 50);
+ctx.fillStyle = 'green';
+ctx.fillRect(80, 80, 75, 50);
+</pre>
+</div>
+
+</body>
+</html>

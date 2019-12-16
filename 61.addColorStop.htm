@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>addColorStop</b></legend>
+
+<p><p>Определяет цвет и позицию остановки в объекте градиента.</p>
+<h4>Синтаксис</h4>
+<p>gradient.addColorStop(позиция, цвет)</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext('2d');
+
+var grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, 'black');
+grd.addColorStop(1, 'white');
+
+ctx.fillStyle = grd;
+ctx.fillRect(20, 20, 150, 100);
+</pre>
+</div>
+
+</body>
+</html>

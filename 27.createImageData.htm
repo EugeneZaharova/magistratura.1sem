@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>createImageData</b></legend>
+
+<p><p>Создает объект imageData.</p>
+
+<h4>Синтаксис 1</h4>
+<p>createImageData(width, height)</p>
+<h4>Параметры</h4>
+<p>width, height &mdash; размеры создаваемого объекта</p>
+<p>Результатом будет объект imageData с RGBA = (0,0,0,0) и размером width x height.</p>
+<h4>Синтаксис 2</h4>
+<p>createImageData(OldImageData)</p>
+<h4>Параметры</h4>
+<p>OldImageData &mdash; объект imageData полученный ранее с помощью getImageData или созданный с помощью createImageData</p>
+<p>Результатом будет объект imageData идентичный OldImageData.</p>
+<p>Чтобы установить нужные цвета в массиве используем свойство data:</p>
+<p>imageData.data[i] = value,</p>
+<ul>
+<li>i &mdash; позиция в массиве imageData;</li>
+<li>value &mdash; значение для данного канала RGBA (число от 0 до 255).</li>
+</ul>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var pixelSet = ctx.createImageData(50,50); // Черный квадрат 50 x 50 полностью прозрачный
+var pixelSetLen = 4*50*50,
+	i;
+for(i=3;i&lt;pixelSetLen;i+=4)
+{
+	pixelSet.data[i] = 255; // далаем его не прорачным
+	if((i-3)%20 == 0) pixelSet.data[i-3] = 255; // каждый 5-й пиксель делаем красным
+}
+ctx.putImageData(pixelSet, 20,20); // выводим изображение
+</pre>
+</div>
+<p><a href="27.createImageData.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

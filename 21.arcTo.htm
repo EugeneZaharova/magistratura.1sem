@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>arcTo</b></legend>
+
+<p><p>Создает дугу/кривую между двумя касательными.</p>
+
+<h4>Синтаксис</h4>
+<p>context.arcTo(x1, y1, x2, y2, r)</p>
+
+<h4>Параметры</h4>
+<ul>
+<li>x1 - координата х первой касательной;</li>
+<li>y1 - координата y первой касательной;</li>
+<li>x2 - координата х второй касательной;</li>
+<li>y2 - координата y второй касательной;</li>
+<li>r - радиус дуги.</li>
+</ul>
+<div class="contentImg"><img src="arcto.png" alt="метод arcTo" width="200" height="130"/></div>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext('2d');
+ctx.beginPath();
+// Создаем начальную точку
+ctx.moveTo(20, 20);
+// Создаем горизонтальную линию
+ctx.lineTo(100, 20);
+// Создаем дугу
+ctx.arcTo(150, 20, 150, 70, 50);
+// Продолжаем линию по вертикали
+ctx.lineTo(150, 120);
+// Рисуем все
+ctx.stroke();
+</pre>
+</div>
+
+</body>
+</html>

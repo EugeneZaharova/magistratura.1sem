@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>measureText</b></legend>
+
+<p><p>Возвращает объект, содержащий ширину заданного текста в пикселях.</p>
+<h4>Синтаксис</h4>
+<p>context.measureText(текст).width</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext('2d');
+ctx.font = '30px Arial';
+var txt = 'Hello World';
+ctx.fillText('width:' + ctx.measureText(txt).width, 10, 50);
+ctx.fillText(txt, 10, 100);
+</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>getLineDash</b></legend>
+
+<p><p>Получает шаблон текущей пунктирной линии.</p>
+<h4>Синтаксис</h4>
+<p>ctx.getLineDash()</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.setLineDash([10, 20]);
+console.log(ctx.getLineDash());  // [10, 20]
+
+// Рисует пунктирную линию
+ctx.beginPath();
+ctx.moveTo(0, 50);
+ctx.lineTo(300, 50);
+ctx.stroke();
+</pre>
+</div>
+
+</body>
+</html>

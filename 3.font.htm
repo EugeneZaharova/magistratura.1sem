@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>font</b></legend>
+
+<p><p>Определяет свойства шрифта.</p>
+<h4>Синтаксис</h4>
+<p>font[=value]</p>
+<p>Значение &mdash; перечень свойств шрифта аналогично синтаксису в CSS(<i>&lt;font>...&lt;/font></i>).</p>
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;myCanvas&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+ctx.font = &quot;italic bold 16px Arial&quot;;
+ctx.textBaseline = &quot;Top&quot;;
+ctx.fillStyle = &quot;blue&quot;;
+ctx.fillText(&quot;Учим canvas&quot;, 40, 100);
+
+ctx.font = &quot;normal normal 32px Tahoma&quot;;
+ctx.textAlign = &quot;center&quot;;
+ctx.strokeText(&quot;canvas оживит сайты&quot;, 300, 200);
+</pre>
+</div>
+<p><a href="3.font.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

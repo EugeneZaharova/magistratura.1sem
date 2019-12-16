@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>globalCompositeOperation</b></legend>
+
+<p><p>Определяет, как будут себя вести перекрывающиеся фигуры.</p>
+<h4>Синтаксис</h4>
+<p>globalCompositeOperation = type</p>
+<p>type &mdash; одно из зарезервированных значений.</p>
+<h4>Заметка</h4>
+<p>В качестве иллюстрации используется пример с двумя фигурами, где синий квадрат рисуется первым.</p>
+<ul>
+<li><strong>source-over</strong> (используется по умолчанию) &mdash; новое изображение рисуется по верх старого
+<div class="contentImg"><img src="source-over.png" alt="source-over" width="125" height="125" /></div>
+</li>
+<li><strong>destination-over</strong> &mdash; новые фигуры рисуются под уже нарисованными
+<div class="contentImg"><img src="destination-over.png" alt="destination-over" width="125" height="125" /></div>
+</li>
+<li><strong>source-in</strong> &mdash; отображается только та часть изображения, где фигуры пересекаются. Сверху новое изображение
+<div class="contentImg"><img src="source-in.png" alt="source-in" width="125" height="125" /></div>
+</li>
+<li><strong>destination-in</strong> &mdash; отображается только та часть изображения, где фигуры пересекаются. Сверху старое изображение
+<div class="contentImg"><img src="destination-in.png" alt="destination-in" width="125" height="125" /></div>
+</li>
+<li><strong>source-out</strong> &mdash; отображается только та часть нового изображения, которая не пересекается с другими фигурами
+<div class="contentImg"><img src="source-out.png" alt="source-out" width="125" height="125" /></div>
+</li>
+<li><strong>destination-out</strong> &mdash; отображается только та часть предшествующего изображения, которая не пересекается с другими фигурами
+<div class="contentImg"><img src="destination-out.png" alt="destination-out" width="125" height="125" /></div>
+</li>
+<li><strong>source-atop</strong> &mdash; у нового изображения отображается только та часть, которая пересекается с предшествующими фигурами
+<div class="contentImg"><img src="source-atop.png" alt="source-atop" width="125" height="125" /></div>
+</li>
+<li><strong>destination-atop</strong> &mdash; у предшествующего изображения отображается (поверх) только та часть, которая пересекается с новой фигурой.
+<div class="contentImg"><img src="destination-atop.png" alt="destination-atop" width="125" height="125" /></div>
+</li>
+<li><strong>lighter</strong> &mdash; место пересечения фигур изменяет цвет на тот, которые получается путем сложения цветов пересекающихся фигур.
+<div class="contentImg"><img src="lighter.png" alt="lighter" width="125" height="125" /></div>
+</li>
+<li><strong>darker</strong> &mdash; место пересечения фигур изменяет цвет на тот, которые получается путем вычитания цветов пересекающихся фигур.
+<div class="contentImg"><img src="darker.png" alt="darker" width="125" height="125" /></div>
+</li>
+<li><strong>xor</strong> &mdash; место пересечения фигур прозрачно.
+<div class="contentImg"><img src="xor.png" alt="xor" width="125" height="125" /></div>
+</li>
+<li><strong>copy</strong> &mdash; отображается только новая фигура, все остальное удаляется.
+<div class="contentImg"><img src="copy.png" alt="copy" width="125" height="125" /></div>
+</li>
+</ul>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;myCanvas&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+ctx.globalCompositeOperation="destination-over";
+</pre>
+</div>
+
+</body>
+</html>

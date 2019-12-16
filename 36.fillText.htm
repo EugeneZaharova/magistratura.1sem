@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>fillText</b></legend>
+
+<p><p>Рисуем текст залитый цветом, определенным fillStyle.</p>
+
+<h4>Синтаксис</h4>
+<p>fillText(text, x, y [, maxWidth ] )</p>
+<h4>Параметры</h4>
+<ul>
+<li>text &mdash; текст, который будем рисовать;</li>
+<li>x,y &mdash; координаты верхнего левого угла текста;</li>
+<li>maxWidth &mdash; не обязательный параметр, если он указан и текст при необходимости будет отмасштабирован чтобы влезть в указанную ширину.</li>
+</ul>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;picture&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+ctx.font = &quot;normal normal 32px Tahoma&quot;;
+ctx.textAlign = &quot;start&quot;;
+ctx.fillText(&quot;Учим canvas&quot;, 300, 200, 100);
+</pre>
+</div>
+<p><a href="36.fillText.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

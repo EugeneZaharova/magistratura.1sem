@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>lineDashOffset</b></legend>
+
+<p><p>Устанавливает фазу смещения пунктирной линии.</p>
+<h4>Синтаксис</h4>
+<p>ctx.lineDashOffset=value</p>
+<p>Число с плавающей запятой, определяющее величину смещения штрихов линии. Значением по умолчанию является 0.0.</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext('2d');
+ctx.fillStyle = 'red';
+ctx.fillRect(20, 20, 75, 50);
+
+// Включим прозрачность
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.setLineDash([4, 16]);
+
+// Пунктирная линия без смещения
+ctx.beginPath();
+ctx.moveTo(0, 50);
+ctx.lineTo(300, 50);
+ctx.stroke();
+
+// Пунктирная линия со смещением 4
+ctx.beginPath();
+ctx.strokeStyle = 'red';
+ctx.lineDashOffset = 4;
+ctx.moveTo(0, 100);
+ctx.lineTo(300, 100);
+ctx.stroke();
+</pre>
+</div>
+
+</body>
+</html>

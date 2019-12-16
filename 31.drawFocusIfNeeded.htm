@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>drawFocusIfNeeded</b></legend>
+
+<p><p>Рисует область фокусировки вокруг текущего или заданного пути, если указанный элемент находится в фокусе.</p>
+
+<h4>Синтаксис</h4>
+<p>context.drawFocusIfNeeded(element)</p>
+<p>Значение element является обязательным.</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const button = document.getElementById('button');
+
+button.focus();
+
+ctx.beginPath();
+ctx.rect(10, 10, 30, 30);
+ctx.drawFocusIfNeeded(button);
+</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>createLinearGradient</b></legend>
+
+<p><p>Создает объект линейного градиента.</p>
+
+<h4>Синтаксис</h4>
+<p>createLinearGradient(x1,y1,x2,y2)</p>
+<ul>
+<li>x1,y1 &mdash; координаты начальной точки;</li>
+<li>x2,y2 &mdash; координаты конечно точки.</li>
+</ul>
+<p>После создания объекта градиента, можно ему присвоить цвета с помощью метода addColorStop. Градиент появится на холсте после применения метода fill() или stroke().</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;picture&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+var lineargradient = ctx.createLinearGradient(150,0,150,150);
+lineargradient.addColorStop(0,&quot;red&quot;);  
+lineargradient.addColorStop(1,&quot;white&quot;);
+ctx.fillStyle = lineargradient;
+ctx.fillRect(0,0,150,150);
+	
+var lineargradient2 = ctx.createLinearGradient(50,50,150,250);
+lineargradient2.addColorStop(0,&quot;green&quot;);  
+lineargradient2.addColorStop(0.5,&quot;blue&quot;);
+lineargradient2.addColorStop(1,&quot;yellow&quot;);
+	
+ctx.strokeStyle = lineargradient2;
+ctx.moveTo(50,50);
+ctx.lineTo(150,250);
+ctx.stroke();
+</pre>
+</div>
+<p><a href="28.createLinearGradient.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

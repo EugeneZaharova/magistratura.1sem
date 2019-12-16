@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>putImageData</b></legend>
+
+<p><p>Помещает на холст объект imageData (содержит RGBA информацию).</p>
+
+<h4>Синтаксис</h4>
+<p>putImageData(imageData, x, y [, dX, dY, dWidth, dHeight])</p>
+<h4>Параметры</h4>
+<ul>
+<li>imageData &mdash; объект, созданный с помощью метода createImageData() или полученный с помощью getImageData().</li>
+<li>x и y &mdash; координаты левого верхнего угла размещаемого на холсте объекта относительно холста;</li>
+<li>dX, dY &mdash; координаты левого верхнего угла относительно изображения в imageData, от которого будут рассчитываться размеры изображения;</li>
+<li>dWidth, dHeight &mdash; размеры размещаемого объекта (обрезается часть изображения, которая не вмещается в эти размеры).</li>
+</ul>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+ctx.fillStyle = &quot;red&quot;;
+ctx.fillRect(10,10,100,40);
+ctx.fillStyle = &quot;green&quot;;
+ctx.globalAlpha = &quot;0.5&quot;;
+ctx.fillRect(90,30,50,50);
+
+var Pixel1 = ctx.getImageData(10,10,140,80); 
+
+ctx.putImageData(Pixel1,200,200,80,20,50,50); // отображаем только зеленый квадрат
+</pre>
+</div>
+<p><a href="46.putImageData.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

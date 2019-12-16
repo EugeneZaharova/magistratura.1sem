@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>filter</b></legend>
+
+<p><p>Добавляет эффекты фильтра.</p>
+<h4>Синтаксис</h4>
+<p>ctx.filter = "&lt;filter-function1> [&lt;filter-function2>] [&lt;filter-functionN>]";<br>
+ctx.filter = "none";</p>
+
+<h4>Параметры</h4>
+<ul>
+<li>blur() - размытие по Гауссу;</li>
+<li>brightness() - изменение яркости;</li>
+<li>contrast() - контраст рисунка;</li>
+<li>drop-shadow() - эффект тени;</li>
+<li>grayscale() - рисунок в оттенках серого;</li>
+<li>hue-rotate() - поворот оттенка на чертеже;</li>
+<li>invert() - инверсия цвета;</li>
+<li>opacity() - прозрачность;</li>
+<li>saturate() - насыщенность;</li>
+<li>sepia() - эффект сепии;</li>
+<li>none - начальное значение без фильтров.</li>
+</ul>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.filter = 'blur(4px)';
+ctx.font = '48px serif';
+ctx.fillText('Hello world', 50, 100);
+</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>setTransform</b></legend>
+
+<p><p>Делает сброс матрицы преобразования к единичной матрице, а затем вызывается метод transform с параметрами указанными в setTransform.</p>
+
+<h4>Синтаксис</h4>
+<p>setTransform(a,b,c,d,e,f)</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var rectWidth = 150;
+var rectHeight = 75;
+
+// перемещаем контекст к центру холста
+ctx.translate(canvas.width / 2, canvas.height / 2);
+ 
+ctx.fillStyle = &quot;blue&quot;;
+ctx.fillRect(-rectWidth / 2, -rectHeight / 2, rectWidth, rectHeight);
+ 
+// сбрасываем матрицу трансформаций
+// 1 0 0
+// 0 1 0
+// 0 0 1
+ 
+// применяем новую трансформацию
+ctx.setTransform(1, 0, 0, 1, 0, 0);
+ 
+ctx.fillStyle = &quot;red&quot;;
+ctx.fillRect(0, 0, rectWidth, rectHeight);
+</pre>
+</div>
+<p><a href="55.setTransform.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>quadraticCurveTo</b></legend>
+
+<p><p>Рисует кривую Безье второго порядка от текущей точки на холсте до указанной через промежуточную (контрольную).</p>
+<div class="contentImg"><img src="quadraticcurveto.png" alt="метод quadraticCurveTo" width="528" height="205" /></div>
+
+<h4>Синтаксис</h4>
+<p>quadraticCurveTo(controlX, controlY, endX, endY)</p>
+<h4>Параметры</h4>
+<ul>
+<li>controlX, controlY &mdash; координаты контрольной точки;</li>
+<li>endX, endY &mdash; координаты окончания кривой.</li>
+</ul>
+<p>Дуга отобразится после вызова метода stroke(). Цвет дуги определяет свойство strokeStyle, толщину линии &mdash; lineWidth. Текущее положение на холсте переместится в конец кривой.</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+ctx.moveTo(75,25);
+ctx.quadraticCurveTo(25,25,25,62.5);
+ctx.quadraticCurveTo(25,100,50,100);
+ctx.quadraticCurveTo(50,120,30,125);
+ctx.quadraticCurveTo(60,120,65,100);
+ctx.quadraticCurveTo(125,100,125,62.5);
+ctx.quadraticCurveTo(125,25,75,25);
+ctx.stroke();
+</pre>
+</div>
+<p><a href="47.quadraticCurveTo.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

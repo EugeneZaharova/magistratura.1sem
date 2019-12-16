@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>lineJoin</b></legend>
+
+<p><p>Определяет оформление соединений линий.</p>
+<h4>Синтаксис</h4>
+<p>lineJoin[=value]</p>
+<p>Доступны три значения: miter (используется по умолчанию), round, bevel. Если не задавать значение, тогда будет происходить чтение свойства.</p>
+<div class="contentImg"><img src="linejoin.png" alt="lineJoin" width="417" height="184" /></div>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;myCanvas&quot;);
+var context = canvas.getContext(&quot;2d&quot;);
+	
+    // miter 
+    context.beginPath();
+    context.moveTo(canvas.width / 2 - 50 - 140, canvas.height - 50);
+    context.lineTo(canvas.width / 2 - 140, 50); 
+    context.lineTo(canvas.width / 2 + 50 - 140, canvas.height - 50);
+    context.lineWidth = 25;
+    context.lineJoin = &quot;miter&quot;;
+    context.stroke();
+ 
+    // round 
+    context.beginPath();
+    context.moveTo(canvas.width / 2 - 50, canvas.height - 50);
+    context.lineTo(canvas.width / 2, 50);
+    context.lineTo(canvas.width / 2 + 50, canvas.height - 50);
+    context.lineWidth = 25;
+    context.lineJoin = &quot;round&quot;;
+    context.stroke();
+ 
+    // bevel
+    context.beginPath();
+    context.moveTo(canvas.width / 2 - 50 + 140, canvas.height - 50);
+    context.lineTo(canvas.width / 2 + 140, 50);
+    context.lineTo(canvas.width / 2 + 50 + 140, canvas.height - 50);
+    context.lineWidth = 25;
+    context.lineJoin = &quot;bevel&quot;;
+    context.stroke();
+</pre>
+</div>
+<p><a href="10.lineJoin.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

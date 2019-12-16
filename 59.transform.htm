@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>transform</b></legend>
+
+<p><p>Применяет нестандартную матрицу преобразования.</p>
+
+<h4>Синтаксис</h4>
+<p>transform(a,b,c,d,e,f)</p>
+<h4>Параметры</h4>
+<div class="contentImg"><img src="transform.png" alt="transform" width="206" height="87" /></div>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var sin = Math.sin(Math.PI/6);  
+var cos = Math.cos(Math.PI/6);  
+ctx.translate(200, 200);  
+var c = 0;  
+for (var i=0; i <= 12; i++) {  
+	c = Math.floor(255 / 12 * i);  
+	ctx.fillStyle = &quot;rgb(&quot; + c + &quot;,&quot; + c + &quot;,&quot; + c + &quot;)&quot;;  
+	ctx.fillRect(0, 0, 100, 10);  
+	ctx.transform(cos, sin, -sin, cos, 0, 0);  
+	}  
+    
+ctx.setTransform(-1, 0, 0, 1, 200, 200);  
+ctx.fillStyle = &quot;rgba(255, 128, 255, 0.5)&quot;;  
+ctx.fillRect(0, 50, 100, 100);
+</pre>
+</div>
+<p><a href="59.transform.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>clip</b></legend>
+
+<p><p>Удаляется все что находится вне указанной фигуры. На рисунке будет удалено все, что вне звезды:</p>
+<div class="contentImg"><img src="clip.png" alt="как действует clip" width="220" height="200" /></div>
+
+<h4>Синтаксис</h4>
+<p>clip()</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;picture&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+ctx.arc(200, 200, 100, 0, 2 * Math.PI, false);
+ctx.stroke();
+ctx.clip();
+
+ctx.beginPath();
+ctx.arc(100, 100, 150, 0, 2 * Math.PI, false);
+ctx.fillStyle = &quot;red&quot;;
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(300, 400, 250, 0, 2 * Math.PI, false);
+ctx.fillStyle = &quot;green&quot;;
+ctx.fill();
+</pre>
+</div>
+<p><a href="25.clip.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

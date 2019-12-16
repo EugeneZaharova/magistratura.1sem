@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>resetTransform</b></legend>
+
+<p><p>Сбрасывает текущее преобразование к единичной матрице.</p>
+<h4>Синтаксис</h4>
+<p>void ctx.resetTransform()</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Рисует повернутый прямоугольник
+ctx.rotate(45 * Math.PI / 180);
+ctx.fillRect(60, 0, 100, 30);
+
+// Сброс матрицы преобразования к единичной матрице
+ctx.resetTransform();
+</pre>
+</div>
+
+</body>
+</html>

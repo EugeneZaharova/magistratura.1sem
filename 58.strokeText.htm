@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>strokeText</b></legend>
+
+<p><p>–исует текст без заливки. ÷вет по умолчанию черный.</p>
+<h4>—интаксис</h4>
+<p>context.strokeText(text, x, y, maxWidth)</p>
+
+<h4>ѕараметры</h4>
+<ul>
+<li>text - строка текста;</li>
+<li>x - координата x начала вывода текста;</li>
+<li>y - координата y начала вывода текста;</li>
+<li>maxWidth - максимально разрешенна€ ширина текста в пиксел€х; необ€зательный параметр.</li>
+</ul>
+
+<h4>ѕример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext('2d');
+
+ctx.font = '20px Georgia';
+ctx.strokeText('Hello World!', 10, 50);
+
+ctx.font = '30px Verdana';
+
+// —оздаем градиент
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+gradient.addColorStop('0', 'magenta');
+gradient.addColorStop('0.5', 'blue');
+gradient.addColorStop('1.0', 'red');
+
+// «аполним градиентом
+ctx.strokeStyle = gradient;
+ctx.strokeText('Big smile!', 10, 90);
+</pre>
+</div>
+
+</body>
+</html>

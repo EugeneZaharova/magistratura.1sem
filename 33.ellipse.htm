@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>ellipse</b></legend>
+
+<p><p>Добавляет эллиптическую дугу.</p>
+<h4>Синтаксис</h4>
+<p>ctx.ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle [, anticlockwise])</p>
+<p>value - значение прозрачности. Должно быть число между 0.0 (полная прозрачность) и 1.0 (нет прозрачности).</p>
+
+<h4>Параметры</h4>
+<ul>
+<li>x - координата х центра эллипса;</li>
+<li>y - координата y центра эллипса;</li>
+<li>radiusX - радиус большой оси эллипса; должен быть неотрицательным;</li>
+<li>radiusY - радиус малой оси эллипса; должен быть неотрицательным;</li>
+<li>rotation - поворот эллипса в радианах;</li>
+<li>startAngle - угол, под которым начинается эллипс, измеряется по часовой стрелке от положительной оси x и выражается в радианах;</li>
+<li>endAngle - угол, под которым заканчивается эллипс, измеряется по часовой стрелке от положительной оси x и выражается в радианах;</li>
+<li>anticlockwise - необязательный атрибут; рисует эллипс против часовой стрелки (true); значение по умолчанию - false.</li>
+</ul>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Рисует эллипс
+ctx.beginPath();
+ctx.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
+ctx.stroke();
+
+// Рисует линию отражения эллипса
+ctx.beginPath();
+ctx.setLineDash([5, 5]);
+ctx.moveTo(0, 200);
+ctx.lineTo(200, 0);
+ctx.stroke();
+</pre>
+</div>
+
+</body>
+</html>

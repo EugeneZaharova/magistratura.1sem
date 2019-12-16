@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>miterLimit</b></legend>
+
+<p><p>При соединении линий (lineJoin) с опцией miter, концы линий продлеваются на определенное расстояние чтобы соединиться. Это расстояние будет небольшим для больших углов и в разы больше для острых.</p>
+<p>Свойство miterLimit задает максимально допустимое расстояние для &quot;дорисовки&quot;. Если для соединения линий требуется большее расстояние, тогда они будут соединены как bevel.</p>
+
+<h4>Синтаксис</h4>
+<p>miterLimit [=value]</p>
+<p>Значение &mdash; число не менее 1.0 (значение меньше будет восприниматься как 1.0). По умолчанию miterLimit = 10.0. Значение 1.0 означает отсутствие удлинения.</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;myCanvas&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+
+ctx.miterLimin = 5.2;
+ctx.moveTo(20,10);
+ctx.lineTo(30,30);
+ctx.lineTo(40,40);
+ctx.stroke();
+</pre>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>arc</b></legend>
+
+<p><p>Рисует дугу.</p>
+
+<h4>Синтаксис</h4>
+<p>arc(centerX, centerY, radius, startingAngle, endingAngle, antiClockwise)</p>
+
+<h4>Параметры</h4>
+<ul>
+<li>centerX, centerY &mdash; координаты центра дуги;</li>
+<li>radius &mdash; величина радиуса;</li>
+<li>startingAngle, endingAngle &mdash; начало и окончание дуги. Значения задаются в радианах;</li>
+<li>antiClockwise &mdash; направление соединения точек начал и конца дуги: по часовой стрелки или против. По умолчанию значение равно false &mdash; рисуем по часовой стрелке. Значение true &mdash; против часовой.</li>
+</ul>
+<div class="contentImg"><img src="arc.png" alt="метод arc" width="365" height="240" /></div>
+<p>Дуга отобразится после вызова метода stroke(), который делает нарисованные линии видимыми. Цвет дуги определяет свойство strokeStyle, толщину линии &mdash; lineWidth.</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+    var centerX = 288,
+    centerY = 160,
+    radius = 75,
+    startingAngle = 1.1 * Math.PI,
+    endingAngle = 1.9 * Math.PI,
+    counterclockwise = false;
+ 
+    context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise);
+ 
+    context.lineWidth = 15;
+    context.strokeStyle = &quot;black&quot;;
+    context.stroke();
+</pre>
+</div>
+<p><a href="20.arc.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

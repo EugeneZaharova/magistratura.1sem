@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>createPattern</b></legend>
+
+<p><p>Позволяет размножать изображение.</p>
+
+<h4>Синтаксис</h4>
+<p>createPattern(image,type)</p>
+<h4>Параметры</h4>
+<ul>
+<li>image &mdash; объект Image();</li>
+<li>type &mdash; строка соответствующая одному из значений: repeat, repeat-x, repeat-y и no-repeat.</li>
+</ul>
+<p>Результат появится на холсте после применения метода fill() или stroke().</p>
+<p>Перед применением метода следует убедиться, что изображение загружено.</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;picture&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+var img = new Image();  
+img.src = &quot;path-to/mobil.png&quot;;  
+img.onload = function(){  
+  
+var ptrn = ctx.createPattern(img,&quot;repeat&quot;);  
+ctx.fillStyle = ptrn;  
+ctx.fillRect(0,0,350,150);  
+}
+</pre>
+</div>
+<p><a href="29.createPattern.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

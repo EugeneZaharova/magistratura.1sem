@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>drawImage</b></legend>
+
+<p><p>Выводит изображение на хосте. Имеет несколько вариантов синтаксиса с разными назначениями.</p>
+
+<h4>Базовый синтаксис</h4>
+<p>Просто отображаем загруженную картинку.</p>
+<p>drawImage(image, x, y)</p>
+<h4>Параметры</h4>
+<ul>
+<li>image &mdash; объект Image();</li>
+<li>x,y &mdash; координаты верхнего левого угла изображения.</li>
+</ul>
+<h4>Масштабирование</h4>
+<p>drawImage(image, x, y, width, height)</p>
+<h4>Параметры</h4>
+<ul>
+<li>image &mdash; объект Image();</li>
+<li>x,y &mdash; координаты верхнего левого угла изображения;</li>
+<li>width, height &mdash; размеры изображения на холсте.</li>
+</ul>
+<p>Изображение будет отмасштабированно согласно указанных размеров. При увеличении масштаба относительно реального изображения, картинка может становиться размытой или зернистой.</p>
+<h2>Обрезание</h2>
+<p>drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)</p>
+<h4>Параметры</h4>
+<ul>
+<li>image &mdash; объект Image() или элемент canvas;</li>
+<li>sx, sy &mdash; координаты верхнего левого угла слайса относительно изображения;</li>
+<li>sWidth, sHeight &mdash; размеры слайса;</li>
+<li>dx,dy &mdash; координаты верхнего левого угла обрезанного изображения;</li>
+<li>dWidth, dHeight &mdash; размеры обрезанного изображения на холсте.</li>
+</ul>
+<div class="contentImg"><img src="drawimage-1.jpg" alt="drawImage - параметры формирования слайса" width="385" height="370" /><br/>
+вырезаем слайс из текущего изображения</div>
+<div class="contentImg"><img src="drawimage-2.jpg" alt="drawImage - позиционирование обрезанной картинки" width="385" height="370" /><br/>
+результирующую картинку позиционируем и масштабируем на холсте</div>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;picture&quot;);
+var ctx = canvas.getContext('2d');
+	
+var img = new Image(); 
+img.src = &quot;path-to/ff.png&quot;; 
+img.onload = function(){
+	ctx.drawImage(img, 300, 100);
+	ctx.drawImage(img, 20, 39, 170, 140, 13, 15, 171, 142);
+}
+</pre>
+</div>
+<p><a href="32.drawImage.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

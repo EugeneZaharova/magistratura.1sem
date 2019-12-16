@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>getImageData</b></legend>
+
+<p><p>ћетод возвращает данные о цвете (RGB) и прозрачности указанного участка холста.</p>
+
+<h4>—интаксис</h4>
+<p>getImageData(sx, sy, sw, sh)</p>
+<h4>ѕараметры</h4>
+<ul>
+<li>sx и sy &mdash; координаты левого верхнего угла пр€моугольника;</li>
+<li>sw &mdash; ширина участка;</li>
+<li>sh &mdash; высота участка.</li>
+</ul>
+<p>ћетод возвращает значени€ в виде массива. Ќапример, получим данные по одному пикселю</p>
+<p>var imageData = ctx.getImageData(10,10,1,1);</p>
+<p>ѕолучим данные в таком виде:</p>
+<ul>
+<li>imageData.data[0] &mdash; значение красного цвета (число от 0 до 255);</li>
+<li>imageData.data[1] &mdash; значение зеленого цвета (число от 0 до 255);</li>
+<li>imageData.data[2] &mdash; значение синего цвета (число от 0 до 255);</li>
+<li>imageData.data[3] &mdash; значение прозрачности (число от 0 до 255);</li>
+</ul>
+<p>“акой массив будет если получать данные одного пиксел€ на холсте. ≈сли же значени€ sw и sh будут больше единицы, массив увеличитс€ (эти значени€ определ€ют размер массива). ƒл€ примера получим данные области 2х2:</p>
+<p>var Pixels = ctx.getImageData(10,10,2,2);</p>
+<p>ƒанные вернутьс€ одномерным массивом размером 4x2x2 (2x2 &mdash; 4 пиксел€ на каждый из которых 4 значени€):</p>
+<div class="contentImg"><img src="getimagedata.png" alt="getImageData" width="600" height="169" /></div>
+<div class="contentImg"><img src="getimagedata-2.png" alt="getImageData" width="106" height="89" /></div>
+
+<h4>ѕример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+ctx.fillStyle = &quot;red&quot;;
+ctx.fillRect(10,10,100,40);
+ctx.fillStyle = &quot;green&quot;;
+ctx.globalAlpha = &quot;0.5&quot;;
+ctx.fillRect(90,30,50,50);
+
+var Pixel = ctx.getImageData(10,10,1,1); 
+alert(&quot;Pixel 1: &quot;+ Pixel.data[0]+&quot;, &quot;+Pixel.data[1]+&quot;, &quot;+ Pixel.data[2]+&quot;, &quot;+ Pixel.data[3]); 
+
+var Pixel = ctx.getImageData(90,30,1,1); 
+alert(&quot;Pixel 2: &quot;+ Pixel.data[0]+&quot;, &quot;+Pixel.data[1]+&quot;, &quot;+ Pixel.data[2]+&quot;, &quot;+ Pixel.data[3]);
+</pre>
+</div>
+<p><a href="38.getImageData.exam.htm">ѕосмотреть пример</a>.</p>
+
+</body>
+</html>

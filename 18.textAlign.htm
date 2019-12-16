@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>textAlign</b></legend>
+
+<p><p>ќпредел€ет выравнивание текста.</p>
+
+<h4>—интаксис</h4>
+<p>textAlign[=value]</p>
+<p>«начение &mdash; один из следующих вариантов:</p>
+<ul>
+<li><strong>start</strong> (по умолчанию) &mdash; по правому краю;</li>
+<li><strong>end</strong> &mdash; по правому краю.</li>
+<li><strong>left</strong> &mdash; по левому краю;</li>
+<li><strong>right</strong> &mdash; по правому краю;</li>
+<li><strong>center</strong> &mdash; по центру;</li>
+</ul>
+<p>¬ыравнивание происходит относительно указанных координат начала текста.</p>
+<p>«начение start / left и right/ end совпадут, когда у нас направление текста ltr. » наоборот, start / right и left / end совпадут дл€ rtl. Ќаправление текста задает свойство direction Ч справа налево или слева направо.</p>
+
+<h4>ѕример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;myCanvas&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+ctx.font = &quot;italic bold 16px Arial&quot;;
+ctx.textBaseline = &quot;Top&quot;;
+ctx.fillStyle = &quot;blue&quot;;
+ctx.fillText(&quot;”чим canvas&quot;, 40, 100);
+
+ctx.font = &quot;normal normal 32px Tahoma&quot;;
+ctx.textAlign = &quot;center&quot;;
+ctx.strokeText(&quot;canvas оживит сайты&quot;, 300, 200);
+</pre>
+</div>
+<p><a href="18.textAlign.exam.htm">ѕосмотреть пример</a>.</p>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>isPointInPath</b></legend>
+
+<p><p>ћетод возвращает true, если указанна€ точка находитс€ внутри контура, и false &mdash; если вне его.</p>
+
+<h4>—интаксис</h4>
+<p>isPointInPath(x, y)</p>
+<h4>ѕараметры</h4>
+<p>x, y &mdash; координат точки, которую провер€ем на попадение в контур.</p>
+
+<h4>ѕример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;picture&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+ctx.beginPath();
+ctx.rect(50,50,100,50);
+ctx.fill();
+ctx.closePath();
+
+var isPath = ctx.isPointInPath(50,50); // return true
+var isPath2 = ctx.isPointInPath(1,1); // return false
+</pre>
+</div>
+
+</body>
+</html>

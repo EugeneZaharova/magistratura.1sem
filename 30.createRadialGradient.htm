@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>createRadialGradient</b></legend>
+
+<p><p>Создает объект радиального градиента.</p>
+
+<h4>Синтаксис</h4>
+<p>createRadialGradient(x1,y1,r1,x2,y2,r2)</p>
+<h4>Параметры</h4>
+<ul>
+<li>x1,y1,r1 &mdash; координаты центра и радиус первой окружности;</li>
+<li>x2,y2,r2 &mdash; координаты центра и радиус второй окружности.</li>
+</ul>
+<p>После создания объекта градиента, можно ему присвоить цвета с помощью метода addColorStop. Градиент появится на холсте после применения метода fill() или stroke().</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;picture&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+var radgrad = ctx.createRadialGradient(105,105,20,112,120,50);  
+radgrad.addColorStop(0, &quot;#FF5F98&quot;);  
+radgrad.addColorStop(0.75, &quot;#FF0188&quot;);  
+radgrad.addColorStop(1, &quot;rgba(255,1,136,0)&quot;);  
+  
+ctx.fillStyle = radgrad;  
+ctx.fillRect(0,0,250,250);
+</pre>
+</div>
+<p><a href="30.createRadialGradient.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

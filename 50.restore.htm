@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>restore</b></legend>
+
+<p><p>Извлекает из стека состояние канвы. При этом извлекаются:</p>
+<ul>
+<li>примененные трансформации;</li>
+<li>значения свойств: strokeStyle, fillStyle, globalAlpha, lineWidth, lineCap, lineJoin, miterLimit, shadowOffsetX, shadowOffsetY, shadowBlur, shadowColor, globalCompositeOperation;
+</li>
+<li>контуры отсечения.</li>
+</ul>
+
+<h4>Синтаксис</h4>
+<p>restore()</p>
+<p>Применяется в паре с методом save().</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+ctx.fillStyle = &quot;red&quot;;
+ctx.save();
+ctx.fillRect(50,50,30,20);
+	
+ctx.fillStyle = &quot;green&quot;;
+ctx.save();
+ctx.fillRect(80,50,30,20);
+	
+ctx.fillStyle = &quot;blue&quot;;
+ctx.fillRect(110,50,30,20);
+	
+ctx.restore();
+ctx.fillRect(140,50,30,20);
+	
+ctx.restore();
+ctx.fillRect(170,50,30,20);
+</pre>
+</div>
+<p><a href="50.restore.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

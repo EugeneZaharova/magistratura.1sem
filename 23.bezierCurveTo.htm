@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>bezierCurveTo</b></legend>
+
+<p><p>Добавляет точку к текущему контуру, используя заданные контрольные точки, которые представляют кубическую кривую Безье.</p>
+<p>Для кубической кривой Безье требуется три точки. Первые две точки - контрольные. Они используются для вычислении кривой Безье. Третья точка - конечная точка кривой. Начальная точка кривой Безье - последняя точка текущего контура. Если контур еще не задан, то следует использовать методы beginPath() и moveTo(), чтобы определить начальную точку.</p>
+
+<h4>Синтаксис</h4>
+<p>context.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)</p>
+
+<h4>Параметры</h4>
+<ul>
+<li>cp1x - координата х первой контрольной точки кривой Безье;</li>
+<li>cp1y - координата y первой контрольной точки кривой Безье;</li>
+<li>cp2x - координата х второй контрольной точки кривой Безье;</li>
+<li>cp2y - координата y второй контрольной точки кривой Безье;</li>
+<li>x - координата х конечной точки;</li>
+<li>y - координата y конечной точки.</li>
+</ul>
+<div class="contentImg"><img src="beziercurveto.gif" alt="bezierCurveTo" width="300" height="140"/></div>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var c = document.getElementById('myCanvas');
+var ctx = c.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(20, 20);
+ctx.bezierCurveTo(20, 100, 200, 100, 200, 20);
+ctx.stroke();
+</pre>
+</div>
+
+</body>
+</html>

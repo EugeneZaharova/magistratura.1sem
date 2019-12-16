@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>setLineDash</b></legend>
+
+<p><p>Задает шаблон пунктирной линии.</p>
+<h4>Синтаксис</h4>
+<p>ctx.setLineDash(segments)</p>
+
+<h4>Параметры</h4>
+<ul>
+<li>segments - числа, которые определяют расстояния, на которых рисуются пунктиры.</li>
+</ul>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Пунктирная линия
+ctx.beginPath();
+ctx.setLineDash([5, 15]);
+ctx.moveTo(0, 50);
+ctx.lineTo(300, 50);
+ctx.stroke();
+
+// Сплошная линия
+ctx.beginPath();
+ctx.setLineDash([]);
+ctx.moveTo(0, 100);
+ctx.lineTo(300, 100);
+ctx.stroke();
+</pre>
+</div>
+
+</body>
+</html>

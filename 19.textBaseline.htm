@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>textBaseline</b></legend>
+
+<p><p>Возвращает / устанавливает выравнивание базовой линии.</p>
+
+<h4>Синтаксис</h4>
+<p>textBaseline[=value]</p>
+<p>Значение &mdash; один из следующих вариантов:</p>
+<ul>
+<li>top</li>
+<li>hanging</li>
+<li>middle</li>
+<li>alphabetic (по умолчанию)</li>
+<li>ideographic</li>
+<li>bottom</li>
+</ul>
+<div class="contentImg"><img src="textbaseline.png" alt="canvas textBaseline" width="600" height="70" /></div>
+<p>Для работы с латиницей достаточно значений top, middle, bottom. Остальные &mdash; более тонкая настройка для остальных символов юникода.</p>
+<div class="contentImg"><img src="baselines.png" alt="canvas textBaseline" width="648" height="239" /></div>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;myCanvas&quot;);
+var ctx = canvas.getContext(&quot;2d&quot;);
+	
+ctx.font = &quot;italic bold 16px Arial&quot;;
+ctx.textBaseline = &quot;Top&quot;;
+ctx.fillStyle = &quot;blue&quot;;
+ctx.fillText(&quot;Учим canvas&quot;, 40, 100);
+
+ctx.font = &quot;normal normal 32px Tahoma&quot;;
+ctx.textAlign = &quot;center&quot;;
+ctx.strokeText(&quot;canvas оживит сайты&quot;, 300, 200);
+</pre>
+</div>
+<p><a href="19.textBaseline.exam.htm">Посмотреть пример</a>.</p>
+
+</body>
+</html>

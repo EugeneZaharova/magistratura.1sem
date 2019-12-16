@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; <!charset=UTF-8>">
+</head>
+
+<body>
+<legend><b>lineWidth</b></legend>
+
+<p><p>Определяет толщину линий.</p>
+<h4>Синтаксис</h4>
+<p>lineWidth[=value]</p>
+<p>Значение &mdash; положительное число в пикселях. Если не задавать значение, тогда будет происходить чтение свойства.</p>
+
+<h4>Пример</h4>
+<div class="codeExample codeJavascript">
+<pre class="brush: xml">
+var canvas = document.getElementById(&quot;myCanvas&quot;);
+var context = canvas.getContext(&quot;2d&quot;);
+context.moveTo(100, 150);
+context.lineTo(450, 50);
+context.lineWidth = 15;
+context.stroke();
+</pre>
+</div>
+
+</body>
+</html>
